@@ -1,0 +1,15 @@
+/* 工作区主内容背景 #F8F8FF —— 不涉及边栏，不影响左侧 */
+
+
+/* 右侧边栏背景 #e6f4f5 */
+.theme-light .workspace-split.mod-right-split {
+    --background-primary: #e6f4f5;
+    --background-secondary: #e6f4f5;
+}
+.theme-light .workspace-split.mod-sidedock.mod-right {
+    --background-primary: #e6f4f5;
+    --background-secondary: #e6f4f5;
+}
+
+
+.

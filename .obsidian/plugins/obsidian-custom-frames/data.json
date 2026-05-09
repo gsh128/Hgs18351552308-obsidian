@@ -1,0 +1,149 @@
+{
+  "frames": [
+    {
+      "url": "https://www.doubao.com/chat",
+      "displayName": "豆包",
+      "icon": "loader",
+      "hideOnMobile": true,
+      "addRibbonIcon": true,
+      "openInCenter": true,
+      "zoomLevel": 1,
+      "forceIframe": true,
+      "customCss": "",
+      "customJs": ""
+    },
+    {
+      "url": "https://www.kimi.com/",
+      "displayName": "KIMI",
+      "icon": "contact-round",
+      "hideOnMobile": true,
+      "addRibbonIcon": true,
+      "openInCenter": true,
+      "zoomLevel": 1,
+      "forceIframe": true,
+      "customCss": "",
+      "customJs": ""
+    },
+    {
+      "url": "https://chat.deepseek.com/",
+      "displayName": "deepseek",
+      "icon": "sparkles",
+      "hideOnMobile": true,
+      "addRibbonIcon": false,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    },
+    {
+      "url": "https://www.qianwen.com/",
+      "displayName": "千问",
+      "icon": "rose",
+      "hideOnMobile": true,
+      "addRibbonIcon": false,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    },
+    {
+      "url": "https://ima.qq.com/",
+      "displayName": "ima",
+      "icon": "panda",
+      "hideOnMobile": true,
+      "addRibbonIcon": false,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    },
+    {
+      "url": "https://chatglm.cn/main/alltoolsdetail?t=1769734098116&lang=zh",
+      "displayName": "智普清言",
+      "icon": "earth-lock",
+      "hideOnMobile": true,
+      "addRibbonIcon": false,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    },
+    {
+      "url": "https://yiyan.baidu.com/",
+      "displayName": "文心一言",
+      "icon": "earth",
+      "hideOnMobile": true,
+      "addRibbonIcon": false,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    },
+    {
+      "url": "https://www.coze.cn/",
+      "displayName": "coze",
+      "icon": "bird",
+      "hideOnMobile": true,
+      "addRibbonIcon": false,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    },
+    {
+      "url": "https://ima.qq.com/wikis",
+      "displayName": "ima知识",
+      "icon": "archive-restore",
+      "hideOnMobile": true,
+      "addRibbonIcon": false,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    },
+    {
+      "url": "https://agent.minimaxi.com/",
+      "displayName": "Minimax",
+      "icon": "trending-up-down",
+      "hideOnMobile": true,
+      "addRibbonIcon": false,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    },
+    {
+      "url": "https://droidxai.com/homeRobot/AIChatRobot",
+      "displayName": "比特",
+      "icon": "send",
+      "hideOnMobile": true,
+      "addRibbonIcon": false,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    },
+    {
+      "url": "https://agentmore.chatglm.cn/chat/69f29f2a3a5265e3b4826919/69f29f333a5265e3b482691b",
+      "displayName": "智谱知秋",
+      "icon": "haze",
+      "hideOnMobile": true,
+      "addRibbonIcon": false,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    }
+  ],
+  "padding": 5
+}

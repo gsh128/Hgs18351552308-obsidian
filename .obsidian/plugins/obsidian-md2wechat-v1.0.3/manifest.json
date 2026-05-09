@@ -1,0 +1,10 @@
+{
+	"id": "md2wechat-publisher",
+	"name": "MD2WeChat Publisher",
+	"version": "1.0.3",
+	"minAppVersion": "0.15.0",
+	"description": "一键调用 md2wechat API，将 Markdown 内容转换为公众号样式。",
+	"author": "geekjourneyx",
+	"authorUrl": "https://github.com/geekjourneyx",
+	"isDesktopOnly": false
+}

@@ -1,0 +1,12 @@
+{
+  "cssTheme": "Blue Topaz",
+  "textFontFamily": "霞鹜铭心宋 MN,霞鹜致宋 MN,霞鹜文楷",
+  "interfaceFontFamily": "霞鹜致宋 CL,霞鹜文楷",
+  "baseFontSize": 18,
+  "baseFontSizeAction": true,
+  "accentColor": "#d31717",
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "custom - background"
+  ]
+}

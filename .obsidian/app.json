@@ -1,0 +1,15 @@
+{
+  "openBehavior": "daily",
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./",
+  "showInlineTitle": false,
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": false,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "promptDelete": false
+}

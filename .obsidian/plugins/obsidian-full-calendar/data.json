@@ -1,0 +1,16 @@
+{
+  "calendarSources": [
+    {
+      "type": "dailynote",
+      "color": "#24d651",
+      "heading": "今日记录"
+    }
+  ],
+  "defaultCalendar": 0,
+  "firstDay": 1,
+  "initialView": {
+    "desktop": "timeGridWeek",
+    "mobile": "timeGridDay"
+  },
+  "timeFormat24h": true
+}

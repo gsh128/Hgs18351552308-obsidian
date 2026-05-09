@@ -1,0 +1,13 @@
+body,
+.workspace,
+.workspace-split.mod-root,
+.workspace-leaf {
+    background-color: #B2DFDB!important;
+}
+
+.workspace-split > div {
+    border-left: 1px solid#004D40 ;
+}
+.workspace-split > div:first-child {
+    border-left: none;
+}

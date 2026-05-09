@@ -1,8 +1,13 @@
 {
   "pluginList": [
+    "logancyang/obsidian-copilot",
     "mtymek/opencode-obsidian"
   ],
   "pluginSubListFrozenVersion": [
+    {
+      "repo": "logancyang/obsidian-copilot",
+      "version": ""
+    },
     {
       "repo": "mtymek/opencode-obsidian",
       "version": ""

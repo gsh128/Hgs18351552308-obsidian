@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html基础认知</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "霞鹜铭心宋", "STKaiti", "楷体", serif;
+            line-height: 1.8;
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            padding: 20px;
+        }
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            padding: 25px;
+            background: white;
+            color: #667eea;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #555;
+            text-indent: 2em;
+        }
+        /* 卡片容器 */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* 卡片样式 */
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        .card h3 {
+            color: #667eea;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        .card p {
+            text-indent: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        .card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>生成 HTML 骨架 </h1>
+
+    <div class="card-container">
+        <!-- 卡片1: HTML5骨架 -->
+        <div class="card">
+            <div class="icon">📝</div>
+            <h3>生成 HTML5 骨架</h3>
+            <p>1. 英文模式下输入 ! 后，按 Tab 键自动生成</p>
+            <p>2. 检查文件格式是否正确或已保存</p>
+            <p>3. 在 VSCode 中使用快捷生成</p>
+        </div>
+
+        <!-- 卡片2: 预览方式1 -->
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3>预览方式 - 直接打开</h3>
+            <p>1. 双击文件夹中的网页图标查看</p>
+            <p>2. 推荐 Chrome 浏览器，设为默认</p>
+            <p>3. 修改后手动刷新浏览器更新</p>
+        </div>
+
+        <!-- 卡片3: 预览方式2 -->
+        <div class="card">
+            <div class="icon">⚡</div>
+            <h3>预览方式 - Live Server</h3>
+            <p>1. 安装 Live Server 插件实现热更新</p>
+            <p>2. Ctrl+Shift+P 选择 Open With Live Server</p>
+            <p>3. 需将网页存放在已打开的文件夹中</p>
+            <p>4. 分屏模式开发，所见即所得</p>
+        </div>
+
+        <!-- 卡片4: HTML5骨架说明 -->
+        <div class="card">
+            <div class="icon">🏗️</div>
+            <h3>HTML5 骨架结构说明</h3>
+            <p><strong>DOCTYPE</strong>：声明文档类型，告诉浏览器用 HTML5 标准解析</p>
+            <p><strong>html</strong>：根元素，lang 属性设置页面语言（zh-CN）</p>
+            <p><strong>head</strong>：元数据区，包含字符编码、视口、标题等</p>
+            <p><strong>body</strong>：页面内容区，用户可见的内容都写在这里</p>
+            <p><strong>meta charset</strong>：设置字符编码为 UTF-8，防止乱码</p>
+            <p><strong>meta viewport</strong>：适配移动端显示</p>
+            <p><strong>title</strong>：网页标题，显示在浏览器标签页</p>
+        </div>
+    </div>
+</body>
+</html>    

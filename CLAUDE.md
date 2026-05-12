@@ -34,6 +34,18 @@ Act as Knowledge Manager and Daily Planner. Capture, connect, and organize knowl
 ## Templates
 `Daily_Note.md`, `Project_Template.md`, `Content_Template.md`, `Wiki_Template.md`, `Inbox_Template.md`
 
+## Session Context
+
+**重要**: 每次会话开始时，优先读取以下文件获取上下文:
+1. `20_项目/*.md` - 活动项目列表 (status: active)
+2. `10_日记/` - 当天日记
+3. `00_收件箱/*.md` - 未处理条目
+
+**上下文持久化流程**:
+- 关键决策 → 写入项目文件或 [[Session_Context]]
+- 新任务 → 按 [[Project_Template]] 创建项目
+- 会话结束 → 更新项目进展
+
 ## Rules
 - Projects link to Areas via frontmatter, NOT folder hierarchy
 - Use wikilinks `[[NoteName]]` liberally

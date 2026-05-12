@@ -22,5 +22,10 @@
   "opencode-obsidian",
   "obsidian-columns",
   "simple-columns",
-  "copilot"
+  "copilot",
+  "refresh-preview",
+  "obsidian-auto-link-title",
+  "obsidian-spaced-repetition",
+  "obsidian-html-plugin",
+  "aosr"
 ]

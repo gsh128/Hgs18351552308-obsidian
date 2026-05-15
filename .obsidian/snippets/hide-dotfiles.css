@@ -1,0 +1,4 @@
+.nav-folder[data-path^="."],
+.nav-file[data-path^="."] {
+  display: none !important;
+}

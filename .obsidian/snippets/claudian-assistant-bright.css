@@ -1,0 +1,79 @@
+/* Claudian 亮色覆盖：1 用户消息 / 2 输入框 / 3 整个聊天区 */
+
+/* 主背景色：浅绿 */
+.claudian-container {
+  --claudian-bg: #dff0d4;
+  --claudian-surface: #eef8e8;
+  --claudian-surface-2: #f7fcf3;
+}
+
+/* 3）整个聊天区 */
+.claudian-container,
+.claudian-messages-wrapper,
+.claudian-messages,
+.claudian-status-panel-container,
+.claudian-input-container {
+  background: var(--claudian-bg) !important;
+}
+
+.claudian-container {
+  color: #1f2328 !important;
+}
+
+/* 1）你的消息 */
+.claudian-message-user {
+  background: var(--claudian-surface) !important;
+  color: #1f2328 !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 10px !important;
+}
+
+.claudian-message-user ::selection {
+  background: rgba(0, 0, 0, 0.12) !important;
+  color: inherit !important;
+}
+
+/* 助手消息保持清爽可读 */
+.claudian-message-assistant {
+  background: var(--claudian-surface-2) !important;
+  color: #1f2328 !important;
+  border-radius: 10px !important;
+}
+
+.claudian-message-assistant .claudian-message-content {
+  color: #2c2c2c !important;
+}
+
+/* 2）输入框 */
+.claudian-input-wrapper {
+  background: var(--claudian-surface-2) !important;
+  border: 1px solid rgba(0, 0, 0, 0.10) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
+}
+
+.claudian-input,
+.claudian-input:hover,
+.claudian-input:focus {
+  background: var(--claudian-surface-2) !important;
+  color: #1f2328 !important;
+  caret-color: #1f2328 !important;
+}
+
+.claudian-input::placeholder {
+  color: #64748b !important;
+}
+
+/* 其它小块也统一变亮 */
+.claudian-ask-list,
+.claudian-ask-item,
+.claudian-ask-custom-item,
+.claudian-ask-item input.claudian-ask-custom-text,
+.claudian-ask-item input.claudian-ask-custom-text:hover,
+.claudian-ask-item input.claudian-ask-custom-text:focus {
+  background: var(--claudian-surface-2) !important;
+  color: #1f2328 !important;
+}
+
+.claudian-ask-item:hover {
+  background: var(--claudian-surface) !important;
+}

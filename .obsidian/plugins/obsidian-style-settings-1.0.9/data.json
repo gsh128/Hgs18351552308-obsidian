@@ -104,5 +104,7 @@
   "anuppuccin-theme-settings@@ctp-custom-base@@light": "#F5FFFA",
   "anuppuccin-theme-settings@@anp-alt-rainbow-style": "anp-full-rainbow-color-toggle",
   "anuppuccin-theme-settings@@anp-h1-color-custom": "anp-h1-blue",
-  "anuppuccin-theme-settings@@anp-h2-color-custom": "anp-h2-green"
+  "anuppuccin-theme-settings@@anp-h2-color-custom": "anp-h2-green",
+  "anuppuccin-theme-settings@@anp-h3-divider": true,
+  "retronotes-settings@@retro-dm": "retro-dm-forest-green"
 }

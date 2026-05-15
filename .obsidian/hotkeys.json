@@ -6,5 +6,13 @@
       ],
       "key": "X"
     }
+  ],
+  "refresh-preview:refresh-all-open-views": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "N"
+    }
   ]
 }

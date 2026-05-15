@@ -25,6 +25,17 @@ body.theme-light .claudian-container {
   --claudian-brand-codex-rgb: 0, 0, 0;
   --claudian-brand-opencode: #707070;
   --claudian-brand-opencode-rgb: 112, 112, 112;
+  --background-primary: #ffffff;
+  --background-primary-alt: #f7f8fb;
+  --background-secondary: #fafbfe;
+  --background-secondary-alt: #f4f6fb;
+  --background-modifier-border: rgba(0, 0, 0, 0.08);
+  --background-modifier-border-hover: rgba(0, 0, 0, 0.12);
+  --background-modifier-hover: rgba(0, 0, 0, 0.04);
+  --background-modifier-form-field: #ffffff;
+  --text-normal: #1f2328;
+  --text-muted: #5b6472;
+  --text-faint: #7a838f;
 }
 
 /* Active-provider alias for single-provider surfaces. */
@@ -826,7 +837,7 @@ body.theme-dark .claudian-provider-icon-variant--dark {
 /* Light mode: use a lighter background so hljs comment colors stay readable */
 body.theme-light .claudian-code-wrapper pre,
 body.theme-light .claudian-message-content pre {
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.04);
 }
 
 /* Code blocks without language - wrap content */
@@ -1760,9 +1771,10 @@ body.theme-light .claudian-message-content pre {
   display: flex;
   flex-direction: column;
   min-height: 140px;
-  border: 1px solid var(--background-modifier-border);
+  border: 1px solid rgba(0, 0, 0, 0.10);
   border-radius: 6px;
-  background: var(--background-primary);
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
 /* Context row (file chip start, selection indicator end) - inside input wrapper at top */
@@ -1828,7 +1840,7 @@ body.theme-light .claudian-message-content pre {
   border: none !important;
   border-radius: 6px;
   background: transparent !important;
-  color: var(--text-normal);
+  color: #1f2328;
   font-family: inherit;
   font-size: 14px;
   line-height: 1.4;
@@ -1846,7 +1858,78 @@ body.theme-light .claudian-message-content pre {
 }
 
 .claudian-input::placeholder {
-  color: var(--text-muted);
+  color: #6b7280;
+}
+
+body.theme-dark .claudian-input-wrapper {
+  background: #f8fafc;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.theme-dark .claudian-input {
+  color: #1f2328;
+}
+
+body.theme-dark .claudian-input::placeholder {
+  color: #64748b;
+}
+
+body.theme-dark .claudian-container .claudian-input-wrapper {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.theme-dark .claudian-container,
+body.theme-dark .claudian-container .claudian-messages-wrapper,
+body.theme-dark .claudian-container .claudian-messages,
+body.theme-dark .claudian-container .claudian-status-panel-container {
+  background: #ffffff !important;
+}
+
+body.theme-dark .claudian-container .claudian-input-container,
+body.theme-dark .claudian-container .claudian-input-toolbar,
+body.theme-dark .claudian-container .claudian-context-row,
+body.theme-dark .claudian-container .claudian-input-nav-row {
+  background: #ffffff !important;
+}
+
+body.theme-dark .claudian-container .claudian-input,
+body.theme-dark .claudian-container .claudian-input:hover,
+body.theme-dark .claudian-container .claudian-input:focus {
+  background-color: #ffffff !important;
+  color: #1f2328 !important;
+  caret-color: #1f2328;
+}
+
+body.theme-dark .claudian-container .claudian-ask-list,
+body.theme-dark .claudian-container .claudian-ask-item,
+body.theme-dark .claudian-container .claudian-ask-custom-item,
+body.theme-dark .claudian-container .claudian-ask-item input.claudian-ask-custom-text,
+body.theme-dark .claudian-container .claudian-ask-item input.claudian-ask-custom-text:hover,
+body.theme-dark .claudian-container .claudian-ask-item input.claudian-ask-custom-text:focus {
+  background: #ffffff !important;
+  color: #1f2328 !important;
+}
+
+body.theme-dark .claudian-container .claudian-ask-item:hover {
+  background: #f3f4f6 !important;
+}
+
+body.theme-dark .claudian-container .claudian-message-user {
+  background: #f3f4f6 !important;
+  color: #1f2328 !important;
+}
+
+body.theme-dark .claudian-container .claudian-message-assistant {
+  background: #ffffff !important;
+  color: #1f2328 !important;
+}
+
+body.theme-dark .claudian-container .claudian-message-user ::selection {
+  background: rgba(0, 0, 0, 0.12) !important;
+  color: inherit !important;
 }
 
 /* Input toolbar */

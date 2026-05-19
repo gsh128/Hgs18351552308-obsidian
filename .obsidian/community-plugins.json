@@ -2,9 +2,7 @@
   "claudian",
   "obsidian-custom-frames",
   "obsidian-image-auto-upload-plugin",
-  "smart-composer",
   "obsidian-style-settings",
-  "obsidian-textgenerator-plugin",
   "calendar",
   "obsidian-full-calendar",
   "periodic-notes",
@@ -19,12 +17,14 @@
   "smart-connections",
   "quickadd",
   "obsidian42-brat",
-  "opencode-obsidian",
   "obsidian-columns",
   "simple-columns",
   "copilot",
   "refresh-preview",
   "obsidian-auto-link-title",
   "obsidian-spaced-repetition",
-  "obsidian-html-plugin"
+  "obsidian-html-plugin",
+  "realclaudian",
+  "obsidian-textgenerator-plugin",
+  "smart-composer"
 ]

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>党建评：要谦虚，不要凌空蹈虚</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #c41230;
+            --primary-dark: #8b0000;
+            --secondary-color: #1a1a1a;
+            --text-primary: #2a2a2a;
+            --text-secondary: #555;
+            --text-muted: #888;
+            --bg-light: #f5f7fa;
+            --bg-card: #ffffff;
+            --border-color: #eee;
+            --accent-yellow: #ffeaa7;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Noto Serif SC", "Source Han Serif CN", serif;
+            font-size: 17px;
+            line-height: 2.1;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecef 50%, #f0f2f5 100%);
+            min-height: 100vh;
+            padding: 60px 20px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            padding: 50px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(30px);
+        }
+
+        .header .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+            margin-bottom: 12px;
+        }
+
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.95;
+            letter-spacing: 1.5px;
+            font-weight: 300;
+        }
+
+        .article {
+            padding: 55px 60px;
+            text-align: justify;
+            position: relative;
+        }
+
+        .article::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-color), transparent);
+        }
+
+        .article p {
+            margin-bottom: 30px;
+            text-indent: 2em;
+            position: relative;
+        }
+
+        .article p:first-child {
+            font-size: 19px;
+            line-height: 2.3;
+            color: var(--text-primary);
+            margin-bottom: 35px;
+        }
+
+        .article p:first-child::first-letter {
+            font-size: 4em;
+            float: left;
+            line-height: 0.95;
+            margin-right: 12px;
+            margin-top: 6px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: "Noto Serif SC", "Source Han Serif CN", serif;
+        }
+
+        .quote {
+            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+            border-left: 4px solid var(--primary-color);
+            padding: 28px 32px;
+            margin: 35px -10px;
+            font-style: italic;
+            color: var(--text-secondary);
+            border-radius: 0 12px 12px 0;
+            position: relative;
+            box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.03);
+        }
+
+        .quote::before {
+            content: "「";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 48px;
+            color: rgba(196, 18, 48, 0.1);
+            font-family: "STKaiti", "KaiTi", serif;
+        }
+
+        .quote::after {
+            content: "」";
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            font-size: 48px;
+            color: rgba(196, 18, 48, 0.1);
+            font-family: "STKaiti", "KaiTi", serif;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(196, 18, 48, 0.15) 0%, rgba(196, 18, 48, 0.2) 100%);
+            color: var(--primary-color);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .highlight:hover {
+            background: linear-gradient(120deg, rgba(196, 18, 48, 0.25) 0%, rgba(196, 18, 48, 0.3) 100%);
+        }
+
+        .divider {
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .divider::before {
+            content: "";
+            position: absolute;
+            top: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(196, 18, 48, 0.1);
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 40px 0 20px;
+            padding-left: 12px;
+            border-left: 3px solid var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .footer {
+            background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+            padding: 35px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-item:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-item::before {
+            content: "★";
+            font-size: 12px;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+                font-size: 16px;
+            }
+
+            .header {
+                padding: 35px 25px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+                letter-spacing: 2px;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+            }
+
+            .article {
+                padding: 35px 25px;
+            }
+
+            .article p:first-child::first-letter {
+                font-size: 3em;
+            }
+
+            .quote {
+                margin: 25px 0;
+                padding: 20px 22px;
+            }
+
+            .footer-content {
+                gap: 16px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 28px 20px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .article {
+                padding: 28px 20px;
+            }
+
+            .article p {
+                text-indent: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="badge">党建评论</div>
+            <h1>要谦虚，不要凌空蹈虚</h1>
+            <div class="subtitle">弘扬谦虚谨慎作风，践行求真务实精神</div>
+        </header>
+
+        <article class="article">
+            <p>面向未来，我们必须坚持谦虚谨慎、戒骄戒躁。"虚心使人进步，骄傲使人落后。"习近平总书记这一重要论述，深刻总结了党的历史经验，也对广大党员干部提出了明确要求。</p>
+
+            <div class="divider"></div>
+
+            <p>谦虚，是共产党人干事创业的必备品格。党员干部都懂得，权力是党和人民赋予的，职位越高、责任越大，越要虚怀若谷、力戒骄狂。只有保持谦虚，才能眼睛向下、脚步向下、扑下身子、沉到一线，真正把情况摸清、把问题找准、把对策提实。</p>
+
+            <div class="quote">
+                毛泽东同志深入江西寻乌、兴国等地一蹲数十天，写出了《寻乌调查》《兴国调查》等光辉著作；周恩来同志深入农村蹲点调研，与群众同吃同住同劳动；陈云同志提出"90%的时间搞调研，10%的时间做决策"。
+            </div>
+
+            <p>老一辈革命家用行动告诉我们：决策的科学性，源于调查研究的扎实；而调研的扎实，离不开谦虚务实的态度。说到底，决策和调研，都得拜人民为师、甘当小学生。</p>
+
+            <div class="divider"></div>
+
+            <p>注重调查研究、倾听群众意愿，是绝大多数干部一以贯之的自觉。他们扑下身子听真话、察实情，把基层的"第一手资料"带回来；他们静下心来深思考、细研判，把群众的"金点子"转化为好政策。这种谦虚务实的态度，让调研有了深度，让决策有了准头。正是千千万万这样脚沾泥土、心系群众的干部，让我们的各项政策能够落地生根。</p>
+
+            <p>但也应当看到，一些领导干部随着政绩的积累、职务的升迁，逐渐自负起来，患上了"<span class="highlight">凌空蹈虚</span>"的毛病。这种毛病，外在是形式主义做派，内里又是官僚主义作祟。</p>
+
+            <p>反映在决策上，就是动辄抛出大战略、大口号，规划做得天花乱坠，却从不问实践可不可行、群众需不需要，甚至关起门来搞"一言堂"，全凭个人经验和好恶随意定夺。</p>
+
+            <p>河北三城、个别领导干部未经科学论证，脱离实际出台规定，强制要求1800余块商户门头牌匾变更颜色，引发群众强烈不满。还有的干部丢掉了深入调查研究这个传家宝，把调研当成了"走秀"，坐着车子转、隔着玻璃看。</p>
+
+            <div class="divider"></div>
+
+            <p>脱离实际，凌空蹈虚，事业为此屡受损失，群众对此深恶痛绝。以敬畏之心破除虚骄，放下架子，拜人民为师，祛除高高在上的心态，是树立和践行正确政绩观的必然要求。</p>
+
+            <p>要大兴调查研究之风，把"四不两直"作为常态，多到困难多、群众意见集中的地方去。决策之前，多问几个"为什么"，不搞"一言堂"，尊重群众意愿、客观规律和基层实际。还要完善政绩考核评价体系，让凌空蹈虚者"没市场"、让谦虚务实者"有舞台"。只有把顶层设计与问计于民结合起来，才能确保各项决策站得住脚、落得了地。</p>
+
+            <p>习近平总书记多次强调，要弘扬谦虚谨慎、艰苦奋斗等光荣传统，涵养求真务实、清正廉洁的新风正气。每一名党员干部都应以此为鉴，时刻警惕凌空蹈虚的陷阱，在工作中敢作敢为、锐意进取，在做人上谦虚谨慎、戒骄戒躁。这样的干部，才能干出经得起检验的实绩，才能赢得人民群众的真心信赖。</p>
+        </article>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <span class="footer-item">谦虚谨慎</span>
+                <span class="footer-item">戒骄戒躁</span>
+                <span class="footer-item">求真务实</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

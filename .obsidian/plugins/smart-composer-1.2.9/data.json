@@ -50,8 +50,8 @@
     {
       "type": "ollama",
       "id": "ollama",
-      "baseUrl": "http://localhost:11434",
-      "apiKey": "33a050be12144b34a2607c95acfea65a.lbRY0NtqCQ-D6og1ldISlV6a"
+      "baseUrl": "",
+      "apiKey": ""
     },
     {
       "type": "lm-studio",
@@ -62,6 +62,18 @@
       "id": "siliconflow",
       "baseUrl": "https://api.siliconflow.cn",
       "apiKey": "sk-mmysulawenhvlhenxhsozfgykepvjssonxaxlqiytkygnqed"
+    },
+    {
+      "type": "openai-compatible",
+      "id": "Zhipu",
+      "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
+      "apiKey": "9b47db17a1534b4ab23675ccb9bf2e5e.awQnba7TVQARKgpx"
+    },
+    {
+      "type": "openai-compatible",
+      "id": "火山",
+      "baseUrl": "https://ark.cn-beijing.volces.com/api/v3",
+      "apiKey": "0b5d88ea-adfc-4343-b071-14d9d943a127"
     }
   ],
   "chatModels": [
@@ -224,6 +236,22 @@
       "model": "deepseek-v4-flash",
       "promptLevel": 1,
       "enable": true
+    },
+    {
+      "providerType": "openai-compatible",
+      "providerId": "Zhipu",
+      "id": "glm-4.7",
+      "model": "glm-4.7",
+      "promptLevel": 1,
+      "enable": true
+    },
+    {
+      "providerType": "openai-compatible",
+      "providerId": "火山",
+      "id": "doubao-seed-2-0-mini-260428",
+      "model": "doubao-seed-2-0-mini-260428",
+      "promptLevel": 1,
+      "enable": true
     }
   ],
   "embeddingModels": [
@@ -268,11 +296,18 @@
       "id": "ollama/bge-m3",
       "model": "bge-m3",
       "dimension": 1024
+    },
+    {
+      "providerType": "openai-compatible",
+      "providerId": "Zhipu",
+      "id": "embedding-3",
+      "model": "embedding-3",
+      "dimension": 2048
     }
   ],
-  "chatModelId": "deepseek-v4-flash",
+  "chatModelId": "doubao-seed-2-0-mini-260428",
   "applyModelId": "deepseek-chat",
-  "embeddingModelId": "ollama/bge-m3",
+  "embeddingModelId": "embedding-3",
   "systemPrompt": "Mr.黄生，有什么为您效劳的，请说！",
   "ragOptions": {
     "chunkSize": 1000,

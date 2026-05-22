@@ -2,6 +2,7 @@
 
 > 来源：[B站视频：100%可用！将DeepSeek V4接入Codex和Claude桌面版的方法](https://www.bilibili.com/video/BV1Sv5f6WErW/)
 > 整理日期：2026-05-18
+> 🔄 更新：2026-05-21 — CCX 升级，密钥统一变更
 
 ---
 
@@ -19,29 +20,33 @@
 https://github.com/BenedictKing/ccx阅读理解这个项目
 ```
 
-### ✅ CCX v2.7.4 安装完成！
+### ✅ CCX 安装完成！
 
 **项目**：Claude / Codex / Gemini API 代理网关（BenedictKing/ccx）  
 **用途**：统一接入多个 AI 模型供应商的 API，支持协议转换、多 Key 轮换、熔断降级
+**🔄 2026-05-21 已升级至最新版**
 
 ### 🌐 访问方式
 
-- **Web 管理界面**：在 Windows 浏览器打开 [http://localhost:3000](http://localhost:3000/)
+- **Web 管理界面**：在 Windows 浏览器打开 [http://localhost:3000](http://localhost:3000/)
 - **健康检查**：[http://localhost:3000/health](http://localhost:3000/health)
 
-### 🔑 默认密钥
+### 🔑 密钥
 
 | 用途   | 密钥值             | 备注                               |
 | ---- | --------------- | -------------------------------- |
-| 代理调用 | `ccx-proxy-key` | 登录`http://localhost:3000`使用      |
-| 管理后台 | `ccx-admin-key` | 在`CC Switch版本v3.15.0`配置api key使用 |
+| 代理调用 | `56143316@qq` | Codex / Hermes 等客户端 API 认证      |
+| 管理后台 | `56143316@qq` | 登录`http://localhost:3000` Web 管理面板 |
+
+> ⚠️ 2026-05-21 CCX 升级后密钥统一为 `56143316@qq`，旧密钥 `ccx-proxy-key` / `ccx-admin-key` 已废弃
+
 
 ## 📍`CC Switch`配置
 
 
 ### 🚀API Key配置
 
-API Key配置为ccx的后台管理密码
+API Key配置为 `56143316@qq`
 
 
 ### 🤖API请求地址

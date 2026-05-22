@@ -1,0 +1,7 @@
+{
+  "openExternalURLs": true,
+  "enableAdblocking": true,
+  "markdownPath": "00_收件箱/Clippings",
+  "customSearchEngine": "https://duckduckgo.com/?q=%s",
+  "searchEngine": "brave"
+}

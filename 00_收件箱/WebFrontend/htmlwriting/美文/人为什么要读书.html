@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人为什么要读书</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --primary-light: #34495e;
+            --accent-color: #3498db;
+            --accent-warm: #e74c3c;
+            --text-primary: #2c3e50;
+            --text-secondary: #5d6d7e;
+            --text-muted: #95a5a6;
+            --bg-light: #f8f9fa;
+            --bg-card: #ffffff;
+            --border-color: #ecf0f1;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Noto Serif SC", "Source Han Serif CN", serif;
+            font-size: 17px;
+            line-height: 2.1;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f4f8 50%, #f5f7fa 100%);
+            min-height: 100vh;
+            padding: 60px 20px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 20px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: #fff;
+            padding: 55px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .header .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+            margin-bottom: 15px;
+            font-family: "Noto Serif SC", "Source Han Serif CN", serif;
+        }
+
+        .header .subtitle {
+            font-size: 15px;
+            opacity: 0.9;
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+
+        .article {
+            padding: 55px 60px;
+            text-align: justify;
+            position: relative;
+        }
+
+        .article::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--accent-color), transparent);
+        }
+
+        .article p {
+            margin-bottom: 32px;
+            text-indent: 2em;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .article p:first-child {
+            font-size: 19px;
+            line-height: 2.3;
+            color: var(--text-primary);
+            margin-bottom: 40px;
+        }
+
+        .article p:first-child::first-letter {
+            font-size: 4.2em;
+            float: left;
+            line-height: 0.9;
+            margin-right: 14px;
+            margin-top: 8px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
+            font-family: "Noto Serif SC", "Source Han Serif CN", "STKaiti", serif;
+        }
+
+        .quote {
+            background: linear-gradient(135deg, #f0f8ff 0%, #f8fafc 100%);
+            border-left: 4px solid var(--accent-color);
+            padding: 30px 35px;
+            margin: 40px -15px;
+            font-style: italic;
+            color: var(--text-secondary);
+            border-radius: 0 14px 14px 0;
+            position: relative;
+            box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.02);
+        }
+
+        .quote::before {
+            content: "「";
+            position: absolute;
+            top: -8px;
+            left: 25px;
+            font-size: 52px;
+            color: rgba(52, 152, 219, 0.12);
+            font-family: "STKaiti", "KaiTi", serif;
+        }
+
+        .quote::after {
+            content: "」";
+            position: absolute;
+            bottom: -25px;
+            right: 25px;
+            font-size: 52px;
+            color: rgba(52, 152, 219, 0.12);
+            font-family: "STKaiti", "KaiTi", serif;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(52, 152, 219, 0.15) 0%, rgba(52, 152, 219, 0.25) 100%);
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .highlight:hover {
+            background: linear-gradient(120deg, rgba(52, 152, 219, 0.25) 0%, rgba(52, 152, 219, 0.35) 100%);
+            transform: scale(1.02);
+        }
+
+        .highlight-warm {
+            background: linear-gradient(120deg, rgba(231, 76, 60, 0.15) 0%, rgba(231, 76, 60, 0.25) 100%);
+            color: var(--accent-warm);
+        }
+
+        .highlight-warm:hover {
+            background: linear-gradient(120deg, rgba(231, 76, 60, 0.25) 0%, rgba(231, 76, 60, 0.35) 100%);
+        }
+
+        .divider {
+            width: 140px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            margin: 45px auto;
+            position: relative;
+        }
+
+        .divider::before {
+            content: "✦";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            background: var(--bg-card);
+            color: var(--accent-color);
+            font-size: 16px;
+            text-align: center;
+            line-height: 24px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 45px 0 25px;
+            padding-left: 15px;
+            border-left: 4px solid var(--accent-color);
+            letter-spacing: 1.5px;
+            font-family: "Noto Serif SC", serif;
+        }
+
+        .footer {
+            background: linear-gradient(180deg, #fafbfc 0%, #f5f7fa 100%);
+            padding: 40px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-item:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-item::before {
+            content: "◆";
+            font-size: 10px;
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+                font-size: 16px;
+            }
+
+            .header {
+                padding: 40px 25px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+                letter-spacing: 3px;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+            }
+
+            .article {
+                padding: 40px 25px;
+            }
+
+            .article p:first-child::first-letter {
+                font-size: 3.2em;
+            }
+
+            .quote {
+                margin: 30px 0;
+                padding: 22px 25px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .article {
+                padding: 30px 20px;
+            }
+
+            .article p {
+                text-indent: 1.5em;
+            }
+
+            .divider {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="badge">读书感悟</div>
+            <h1>人为什么要读书</h1>
+            <div class="subtitle">读书是门槛最低的高贵</div>
+        </header>
+
+        <article class="article">
+            <p>《千古家训》中有这样一句话：<span class="highlight">穷不读书，穷根难断；富不读书，富不长久。</span>读书是普通人逆风翻盘的唯一"捷径"。贫者因书而富，富者因书而贵，贵者因书而守成。忠厚传家久，诗书继世长。</p>
+
+            <div class="quote">
+                读书，世界就在眼前；不读书，眼前就是世界。
+            </div>
+
+            <p>读书，虽不是人生唯一的出路，但不读书，会挡住你很多出路。读书，能解决80%以上的迷茫，也会悄悄帮你抹去脸上的肤浅与无知。一本好书就像一盏明灯，照亮你前行的道路；一本好书又如一位良师益友，陪伴你走过人生的春夏秋冬。</p>
+
+            <div class="divider"></div>
+
+            <p>所以，同学们，<span class="highlight highlight-warm">读书和赚钱，是人生最好的修行。</span>前者让人不惑，后者让人有尊严。读书对人最大的改变，其实是心态的改变。通过一些书籍的阅读，我们会对自我有更准确的定位，从而放下不切实际的幻想，珍惜眼下所拥有的。</p>
+
+            <p>这就是读书的意义——它让我们在浮躁的世界中保持内心的平静，在迷茫的时刻找到前行的方向，在平凡的生活里发现生命的美好。读书不是为了应付考试，也不是为了装点门面，而是为了遇见更好的自己。</p>
+
+            <div class="quote">
+                腹有诗书气自华，最是书香能致远。
+            </div>
+
+            <p>愿每一个热爱读书的人，都能在文字的海洋中找到属于自己的那片星辰大海，让书香浸润心灵，让智慧点亮人生。</p>
+        </article>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <span class="footer-item">读万卷书</span>
+                <span class="footer-item">行万里路</span>
+                <span class="footer-item">知书达理</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -10,7 +10,7 @@ aliases:
 
 # {{date:YYYY-MM-DD}}
 
-[[日记看板]] · 📅 `{{date:YYYY年M月D日}}` · 星期{{date:dddd}}
+[[日记看板]] · 📅 `{{date:YYYY年M月D日}}` · {{date:dddd}}
 
 ## 今日记录
 - [ ] 
